@@ -31,27 +31,22 @@ public class Proveedor {
     private int idProveedor;
 
     @Size(max = 100, message = "La razón social no debe superar los 100 caracteres")
-    @NotBlank(message = "La razón social es obligatoria")
     @Column(name = "razonSocial")
     private String razonSocial;
 
     @Size(max = 100, message = "El nombre comercial no debe superar los 100 caracteres")
-    @NotBlank(message = "El nombre comercial es obligatorio")
     @Column(name = "nombreComercial")
     private String nombreComercial;
 
     @Digits(integer = 11, fraction = 0, message = "El RUC debe tener como máximo 11 dígitos")
-    @NotNull(message = "El RUC es obligatorio")
     @Column(name = "ruc")
     private Long ruc;
 
-    @NotNull(message = "El teléfono es obligatorio")
     @Column(name = "telefono")
     private Integer telefono;
 
     @Email(message = "Debe ingresar un correo válido")
     @Size(max = 100, message = "El correo no debe superar los 100 caracteres")
-    @NotBlank(message = "El correo es obligatorio")
     @Column(name = "correo")
     private String correo;
 
